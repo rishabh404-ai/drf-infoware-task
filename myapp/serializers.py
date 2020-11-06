@@ -1,15 +1,10 @@
 from rest_framework import serializers
-from .models import User,UserManager
+from .models import User                   
 from rest_framework.serializers import ModelSerializer
 from rest_framework import authentication
 from rest_framework.exceptions import AuthenticationFailed
 from django.contrib.auth import authenticate
 from rest_framework import exceptions
-from rest_framework.authtoken.models import Token
-from django.contrib.auth.tokens import PasswordResetTokenGenerator
-from django.utils.encoding import smart_str, force_str, smart_bytes, DjangoUnicodeDecodeError
-from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
-from django.views.decorators.csrf import csrf_exempt
 from rest_framework.response import Response
 from rest_framework.validators import UniqueValidator 
 
