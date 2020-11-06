@@ -78,13 +78,26 @@ AUTH_USER_MODEL = 'myapp.User' #changes the built-in user model to ours
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+#MY-SQL Connections have bugs in it. mysqlclient is unable to install in my ubuntu 20.04. 
+'''
+DATABASES = {
+    'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'test',  
+    'HOST': 'localhost',
+    'PORT': '3306',
+    'USER': 'test',
+    'PASSWORD': 'husybuc004',
+}
+}
+'''
+#Had to go for default database as of now.
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
