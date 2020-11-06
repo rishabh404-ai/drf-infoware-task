@@ -98,7 +98,7 @@ class UserLoginAPIView(generics.GenericAPIView):
 
 class UserLogoutView(APIView):
    """
-   REST API making a POST request for registering a User. 
+   REST API making a POST request for logging out a User. 
    """
    
    authentication_classes = [TokenAuthentication,]
