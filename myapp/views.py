@@ -145,7 +145,7 @@ class UserEditProfileAPIView(generics.GenericAPIView):
   """
 
   serializer_class       = UserEditSerializer
-  #authentication_classes = (TokenAuthentication,) 
+  authentication_classes = (TokenAuthentication,) 
   permission_classes     = [IsAuthenticated,]
 
   def get(self, request, *args, **kwargs):
