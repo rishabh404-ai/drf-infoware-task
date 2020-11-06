@@ -1,5 +1,9 @@
 # drf-infoware-task
 
+Project folder : drftest
+App : myapp
+
+
 1. API For User Registeration
 Signup where user will register with these data 
 Name 
