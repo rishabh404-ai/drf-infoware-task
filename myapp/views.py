@@ -38,6 +38,8 @@ class UserRegisterAPIView(generics.GenericAPIView):
     photo      = request.data['photo']
     username   = request.data['username']
 
+    ''' Validation Checks Starts Here ''' 
+    
     if User.objects.filter(email=email).exists():
         raise ValidationError({"status":'failed',
                                "message" : 'This Email-ID is already taken !',
@@ -56,6 +58,14 @@ class UserRegisterAPIView(generics.GenericAPIView):
                                "message" : 'Please enter password !',
                                "data": []})  
 
+    if not username: 
+        raise ValidationError({"status":'failed',
+                               "message" : 'Please enter password !',
+                               "data": []})  
+                           
+    
+    ''' User Creation '''
+  
     try:     
       user = User.objects.create_user(full_name=full_name,email=email,password=password,photo=photo,username=username)
       user.save()
