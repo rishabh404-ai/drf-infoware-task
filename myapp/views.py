@@ -60,7 +60,7 @@ class UserRegisterAPIView(generics.GenericAPIView):
 
     if not username: 
         raise ValidationError({"status":'failed',
-                               "message" : 'Please enter password !',
+                               "message" : 'Please enter username !',
                                "data": []})  
                            
     
