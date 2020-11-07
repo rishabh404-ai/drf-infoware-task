@@ -62,7 +62,11 @@ class UserRegisterAPIView(generics.GenericAPIView):
         raise ValidationError({"status":'failed',
                                "message" : 'Please enter username !',
                                "data": []})  
-                           
+
+    if not photo:  
+      raise ValidationError({"status":'failed',
+                             "message" : 'Please upload your profile picture !',
+                             "data": []})                       
     
     ''' User Creation '''
   
