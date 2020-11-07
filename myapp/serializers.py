@@ -25,8 +25,8 @@ class UserRegisterSerializer(serializers.Serializer):
     email     = serializers.EmailField(required=True)
     password  = serializers.CharField(required=True,style={'input_type':'password'},write_only=True)
     password2 = serializers.CharField(style={'input_type':'password'},write_only=True)
-    photo     = serializers.ImageField(required=False)
-    username  = serializers.CharField(required=False)
+    photo     = serializers.ImageField(required=True)
+    username  = serializers.CharField(required=True)
       
     class Meta:
         model  = User
