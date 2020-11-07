@@ -78,7 +78,7 @@ AUTH_USER_MODEL = 'myapp.User' #changes the built-in user model to ours
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-#MY-SQL Connections have bugs in it. mysqlclient is unable to install in my ubuntu 20.04. 
+# Cannot Install Mysqlclient or even workbench as of now due to ubuntu 20.04 os software updater issues bugs in my laptop.
 '''
 DATABASES = {
     'default': {
